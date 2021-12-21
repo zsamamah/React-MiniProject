@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import AddItem from "./Components/todoList/AddItem";
+import { BrowserRouter,Route,Routes } from "react-router-dom";
+import Home from "./Components/Home";
+import NavBar from "./Components/NavBar";
+import Expense from "./Components/expenseTracker/Expense";
+import NotFound from "./Components/NotFound";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <BrowserRouter>
+    <NavBar/>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/todo' element={<AddItem/>}/>
+      <Route path='/expense' element={<Expense/>}/>
+      <Route path='*' element={<NotFound/>}/>
+    </Routes>
+    </BrowserRouter>
+    {/* <AddItem/> */}
+    </>
   );
 }
 

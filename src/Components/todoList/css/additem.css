@@ -1,0 +1,39 @@
+.item_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid grey;
+    margin: 1em 0;
+    padding: 0.5em;
+    width: 50%;
+}
+.item_options{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 0.5em;
+    gap: 1em;
+}
+#todo_container{
+    padding: 1em;
+}
+.red{
+    color: red;
+}
+#new_todo{
+    background-color: #1d2b8a;
+    color: white;
+    padding:0.4em;
+    border-radius: 0.5em;
+
+}
+#todoForm{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+#todoForm input{
+    border-radius: 0.5em;
+    border:1px solid black;
+    padding:0.4em;
+}
